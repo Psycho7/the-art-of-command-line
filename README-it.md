@@ -1,5 +1,5 @@
 🌍
-*[Čeština](README-cs.md) ∙ [Deutsch](README-de.md) ∙ [Ελληνικά](README-el.md) ∙ [English](README.md) ∙ [Español](README-es.md) ∙ [Français](README-fr.md) ∙ [Indonesia](README-id.md) ∙ [Italiano](README-it.md) ∙ [日本語](README-ja.md) ∙ [한국어](README-ko.md) ∙ [Português](README-pt.md) ∙ [Română](README-ro.md) ∙ [Русский](README-ru.md) ∙ [Slovenščina](README-sl.md) ∙ [Українська](README-uk.md) ∙ [简体中文](README-zh.md) ∙ [繁體中文](README-zh-Hant.md)*
+*[Čeština](README-cs.md) ∙ [Deutsch](README-de.md) ∙ [Ελληνικά](README-el.md) ∙ [English](README.md) ∙ [Español](README-es.md) ∙ [Français](README-fr.md) ∙ [Indonesia](README-id.md) ∙ [Italiano](README-it.md) ∙ [日本語](README-ja.md) ∙ [한국어](README-ko.md) ∙ [polski](README-pl.md) ∙ [Português](README-pt.md) ∙ [Română](README-ro.md) ∙ [Русский](README-ru.md) ∙ [Slovenščina](README-sl.md) ∙ [Українська](README-uk.md) ∙ [简体中文](README-zh.md) ∙ [繁體中文](README-zh-Hant.md)*
 
 # The Art of Command Line (Traduzione Italiana)
 
@@ -156,7 +156,7 @@ Note:
 
 - Altre opzioni sempre interessanti riguardo ssh sono sensibili in termini di sicurezza e dovrebbero essere gestite con cura: alcuni esempi sono `StrictHostKeyChecking=no` e `ForwardAgent=yes`;
 
-- Considera l'uso di [`mosh`](https://mosh.mit.edu/), un'alternativa ad ssh che usa UDP, in modo tale da evitare connessioni interrotte.
+- Considera l'uso di [`mosh`](https://mosh.org/), un'alternativa ad ssh che usa UDP, in modo tale da evitare connessioni interrotte.
 
 - Per ottenere i permessi relativi ad un certo file in forma ottale, utile alla configurazione ma non disponibile in `ls` usa qualcosa come
 

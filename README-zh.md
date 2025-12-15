@@ -1,5 +1,5 @@
 🌍
-*[Čeština](README-cs.md) ∙ [Deutsch](README-de.md) ∙ [Ελληνικά](README-el.md) ∙ [English](README.md) ∙ [Español](README-es.md) ∙ [Français](README-fr.md) ∙ [Indonesia](README-id.md) ∙ [Italiano](README-it.md) ∙ [日本語](README-ja.md) ∙ [한국어](README-ko.md) ∙ [Português](README-pt.md) ∙ [Română](README-ro.md) ∙ [Русский](README-ru.md) ∙ [Slovenščina](README-sl.md) ∙ [Українська](README-uk.md) ∙ [简体中文](README-zh.md) ∙ [繁體中文](README-zh-Hant.md)*
+*[Čeština](README-cs.md) ∙ [Deutsch](README-de.md) ∙ [Ελληνικά](README-el.md) ∙ [English](README.md) ∙ [Español](README-es.md) ∙ [Français](README-fr.md) ∙ [Indonesia](README-id.md) ∙ [Italiano](README-it.md) ∙ [日本語](README-ja.md) ∙ [한국어](README-ko.md) ∙ [polski](README-pl.md) ∙ [Português](README-pt.md) ∙ [Română](README-ro.md) ∙ [Русский](README-ru.md) ∙ [Slovenščina](README-sl.md) ∙ [Українська](README-uk.md) ∙ [简体中文](README-zh.md) ∙ [繁體中文](README-zh-Hant.md)*
 
 
 # 命令行的艺术
@@ -28,7 +28,7 @@
 [首次](http://www.quora.com/What-are-some-lesser-known-but-useful-Unix-commands)
 [出现](http://www.quora.com/What-are-the-most-useful-Swiss-army-knife-one-liners-on-Unix)
 于 [Quora](http://www.quora.com/What-are-some-time-saving-tips-that-every-Linux-user-should-know)，
-但已经迁移到了 Github，并由众多高手做出了许多改进。
+但已经迁移到了 GitHub，并由众多高手做出了许多改进。
 如果你在本文中发现了错误或者存在可以改善的地方，请[**贡献你的一份力量**](/CONTRIBUTING.md)。
 
 ## 前言
@@ -108,7 +108,7 @@
 
 - 使用 `nohup` 或 `disown` 使一个后台进程持续运行。
 
-- 使用 `netstat -lntp` 或 `ss -plat` 检查哪些进程在监听端口（默认是检查 TCP 端口; 添加参数 `-u` 则检查 UDP 端口）。
+- 使用 `netstat -lntp` 或 `ss -plat` 检查哪些进程在监听端口（默认是检查 TCP 端口; 添加参数 `-u` 则检查 UDP 端口）或者 `lsof -iTCP -sTCP:LISTEN -P -n` (这也可以在 OS X 上运行)。
 
 - `lsof` 来查看开启的套接字和文件。
 
@@ -176,7 +176,7 @@
 
 - 一些其他的关于 ssh 的选项是与安全相关的，应当小心翼翼的使用。例如你应当只能在可信任的网络中启用 `StrictHostKeyChecking=no`，`ForwardAgent=yes`。
 
-- 考虑使用 [`mosh`](https://mosh.mit.edu/) 作为 ssh 的替代品，它使用 UDP 协议。它可以避免连接被中断并且对带宽需求更小，但它需要在服务端做相应的配置。
+- 考虑使用 [`mosh`](https://mosh.org/) 作为 ssh 的替代品，它使用 UDP 协议。它可以避免连接被中断并且对带宽需求更小，但它需要在服务端做相应的配置。
 
 - 获取八进制形式的文件访问权限（修改系统设置时通常需要，但 `ls` 的功能不那么好用并且通常会搞砸），可以使用类似如下的代码：
 ```sh
@@ -192,7 +192,7 @@
 
 - 以其他用户的身份执行命令，使用 `sudo`。默认以 root 用户的身份执行；使用 `-u` 来指定其他用户。使用 `-i` 来以该用户登录（需要输入_你自己的_密码）。
 
-- 将 shell 切换为其他用户，使用 `su username` 或者 `sudo - username`。加入 `-` 会使得切换后的环境与使用该用户登录后的环境相同。省略用户名则默认为 root。切换到哪个用户，就需要输入_哪个用户的_密码。
+- 将 shell 切换为其他用户，使用 `su username` 或者 `su - username`。加入 `-` 会使得切换后的环境与使用该用户登录后的环境相同。省略用户名则默认为 root。切换到哪个用户，就需要输入_哪个用户的_密码。
 
 - 了解命令行的 [128K 限制](https://wiki.debian.org/CommonErrorMessages/ArgumentListTooLong)。使用通配符匹配大量文件名时，常会遇到“Argument list too long”的错误信息。（这种情况下换用 `find` 或 `xargs` 通常可以解决。）
 
@@ -237,7 +237,7 @@
 
 - 你可以单独指定某一条命令的环境，只需在调用时把环境变量设定放在命令的前面，例如 `TZ=Pacific/Fiji date` 可以获取斐济的时间。
 
-- 了解如何使用 `awk` 和 `sed` 来进行简单的数据处理。例如，将文本文件中第三列的所有数字求和：`awk '{ x += $3 } END { print x }'`。这可能比同等功能的 Python 代码快三倍且代码量少三倍。
+- 了解如何使用 `awk` 和 `sed` 来进行简单的数据处理。 参阅 [One-liners](#one-liners) 获取示例。
 
 - 替换一个或多个文件中出现的字符串：
 ```sh
@@ -258,6 +258,8 @@
 ```sh
 mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 ```
+
+- 若要在复制文件时获取当前进度，可使用 `pv`，[`pycp`](https://github.com/dmerejkowsky/pycp)，[`progress`](https://github.com/Xfennec/progress)，`rsync --progress`。若所执行的复制为block块拷贝，可以使用 `dd status=progress`。
 
 - 使用 `shuf` 可以以行为单位来打乱文件的内容或从一个文件中随机选取多行。
 
@@ -320,7 +322,7 @@ mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 
 - 了解 `strace` 和 `ltrace`。这俩工具在你的程序运行失败、挂起甚至崩溃，而你却不知道为什么或你想对性能有个总体的认识的时候是非常有用的。注意 profile 参数（`-c`）和附加到一个运行的进程参数 （`-p`）。
 
-- 了解使用 `ldd` 来检查共享库。
+- 了解使用 `ldd` 来检查共享库。但是[永远不要在不信任的文件上运行](http://www.catonmat.net/blog/ldd-arbitrary-code-execution/)。
 
 - 了解如何运用 `gdb` 连接到一个运行着的进程并获取它的堆栈轨迹。
 
@@ -344,9 +346,9 @@ mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 
 - 当你需要对文本文件做集合交、并、差运算时，`sort` 和 `uniq` 会是你的好帮手。具体例子请参照代码后面的，此处假设 `a` 与 `b` 是两内容不同的文件。这种方式效率很高，并且在小文件和上 G 的文件上都能运用（注意尽管在 `/tmp` 在一个小的根分区上时你可能需要 `-T` 参数，但是实际上 `sort` 并不被内存大小约束），参阅前文中关于 `LC_ALL` 和 `sort` 的 `-u` 参数的部分。
 ```sh
-      cat a b | sort | uniq > c   # c 是 a 并 b
-      cat a b | sort | uniq -d > c   # c 是 a 交 b
-      cat a b b | sort | uniq -u > c   # c 是 a - b
+      sort a b | uniq > c   # c 是 a 并 b
+      sort a b | uniq -d > c   # c 是 a 交 b
+      sort a b b | uniq -u > c   # c 是 a - b
 ```
 
 - 使用 `grep . *`（每行都会附上文件名）或者 `head -100 *`（每个文件有一个标题）来阅读检查目录下所有文件的内容。这在检查一个充满配置文件的目录（如 `/sys`、`/proc`、`/etc`）时特别好用。
@@ -364,7 +366,7 @@ mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 
 - 假设你有一个类似于 web 服务器日志文件的文本文件，并且一个确定的值只会出现在某些行上，假设一个 `acct_id` 参数在 URI 中。如果你想计算出每个 `acct_id` 值有多少次请求，使用如下代码：
 ```sh
-      cat access.log | egrep -o 'acct_id=[0-9]+' | cut -d= -f2 | sort | uniq -c | sort -rn
+      egrep -o 'acct_id=[0-9]+' access.log | cut -d= -f2 | sort | uniq -c | sort -rn
 ```
 
 - 要持续监测文件改动，可以使用 `watch`，例如检查某个文件夹中文件的改变，可以用 `watch -d -n 2 'ls -rtlh | tail'`；或者在排查 WiFi 设置故障时要监测网络设置的更改，可以用 `watch -d -n 2 ifconfig`。
@@ -445,13 +447,13 @@ mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 
 - `watch`：重复运行同一个命令，展示结果并／或高亮有更改的部分
 
+- [`when-changed`](https://github.com/joh/when-changed)：当检测到文件更改时执行指定命令。参阅 `inotifywait` 和 `entr`。
+
 - `tac`：反向输出文件
 
 - `shuf`：文件中随机选取几行
 
 - `comm`：一行一行的比较排序过的文件
-
-- `pv`：监视通过管道的数据
 
 - `strings`：从二进制文件中抽取文本
 
@@ -473,7 +475,7 @@ mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 
 - `nm`：提取 obj 文件中的符号
 
-- `ab`：web 服务器性能分析
+- `ab` 或 [`wrk`](https://github.com/wg/wrk)：web 服务器性能分析
 
 - `strace`：调试系统调用
 
@@ -552,9 +554,25 @@ mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 
 以下是*仅限于* Windows 系统的技巧。
 
-- 在 Windows 10 上，你可以使用 [Bash on Ubuntu on Windows](https://msdn.microsoft.com/commandline/wsl/about)，它提供了一个熟悉的 Bash 环境，包含了不少 Unix 命令行工具。好处是它允许 Linux 上编写的程序能够在 Windows 上运行，而另一方面，Windows 上编写的程序却无法在 Bash 命令行中运行。
+### 在 Windows 下获取 Unix 工具
 
 - 可以安装 [Cygwin](https://cygwin.com/) 允许你在 Microsoft Windows 中体验 Unix shell 的威力。这样的话，本文中介绍的大多数内容都将适用。
+
+- 在 Windows 10 上，你可以使用 [Bash on Ubuntu on Windows](https://msdn.microsoft.com/commandline/wsl/about)，它提供了一个熟悉的 Bash 环境，包含了不少 Unix 命令行工具。好处是它允许 Linux 上编写的程序在 Windows 上运行，而另一方面，Windows 上编写的程序却无法在 Bash 命令行中运行。
+
+- 如果你在 Windows 上主要想用 GNU 开发者工具（例如 GCC），可以考虑 [MinGW](http://www.mingw.org/) 以及它的 [MSYS](http://www.mingw.org/wiki/msys) 包，这个包提供了例如 bash，gawk，make 和 grep 的工具。MSYS 并不包含所有可以与 Cygwin 媲美的特性。当制作 Unix 工具的原生 Windows 端口时 MinGW 将特别地有用。
+
+- 另一个在 Windows 下实现接近 Unix 环境外观效果的选项是 [Cash](https://github.com/dthree/cash)。注意在此环境下只有很少的 Unix 命令和命令行可用。
+
+### 实用 Windows 命令行工具
+
+- 可以使用 `wmic` 在命令行环境下给大部分 Windows 系统管理任务编写脚本以及执行这些任务。
+
+- Windows 实用的原生命令行网络工具包括 `ping`，`ipconfig`，`tracert`，和 `netstat`。
+
+- 可以使用 `Rundll32` 命令来实现[许多有用的 Windows 任务](http://www.thewindowsclub.com/rundll32-shortcut-commands-windows) 。
+
+### Cygwin 技巧
 
 - 通过 Cygwin 的包管理器来安装额外的 Unix 程序。
 

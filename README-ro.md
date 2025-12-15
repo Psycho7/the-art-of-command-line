@@ -1,5 +1,5 @@
 🌍
-*[Čeština](README-cs.md) ∙ [Deutsch](README-de.md) ∙ [Ελληνικά](README-el.md) ∙ [English](README.md) ∙ [Español](README-es.md) ∙ [Français](README-fr.md) ∙ [Indonesia](README-id.md) ∙ [Italiano](README-it.md) ∙ [日本語](README-ja.md) ∙ [한국어](README-ko.md) ∙ [Português](README-pt.md) ∙ [Română](README-ro.md) ∙ [Русский](README-ru.md) ∙ [Slovenščina](README-sl.md) ∙ [Українська](README-uk.md) ∙ [简体中文](README-zh.md) ∙ [繁體中文](README-zh-Hant.md)*
+*[Čeština](README-cs.md) ∙ [Deutsch](README-de.md) ∙ [Ελληνικά](README-el.md) ∙ [English](README.md) ∙ [Español](README-es.md) ∙ [Français](README-fr.md) ∙ [Indonesia](README-id.md) ∙ [Italiano](README-it.md) ∙ [日本語](README-ja.md) ∙ [한국어](README-ko.md) ∙ [polski](README-pl.md) ∙ [Português](README-pt.md) ∙ [Română](README-ro.md) ∙ [Русский](README-ru.md) ∙ [Slovenščina](README-sl.md) ∙ [Українська](README-uk.md) ∙ [简体中文](README-zh.md) ∙ [繁體中文](README-zh-Hant.md)*
 
 
 # Arta liniei de comandă
@@ -177,7 +177,7 @@ Note:
 
 - Un număr de alte opțiuni sunt relevante pentru securitate și trebuiesc tratate cu atenție, de exemplu, setări pe rețea sau mașină: `StrictHostKeyChecking=no`, `ForwardAgent=yes`
 
-- Considerați folosirea [`mosh`](https://mosh.mit.edu/) ca o alternativă la ssh care folosește UDP, prevenind conexiunile eșuate (necesită setări pe partea de server).
+- Considerați folosirea [`mosh`](https://mosh.org/) ca o alternativă la ssh care folosește UDP, prevenind conexiunile eșuate (necesită setări pe partea de server).
 
 - Pentru a obține permisiunile unui fișier în forma octală, lucru util pentru configurarea sistemului, dar nedisponibil în `ls`, folosiți ceva precum:
 ```sh

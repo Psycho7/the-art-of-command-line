@@ -1,5 +1,5 @@
 🌍
-*[Čeština](README-cs.md) ∙ [Deutsch](README-de.md) ∙ [Ελληνικά](README-el.md) ∙ [English](README.md) ∙ [Español](README-es.md) ∙ [Français](README-fr.md) ∙ [Indonesia](README-id.md) ∙ [Italiano](README-it.md) ∙ [日本語](README-ja.md) ∙ [한국어](README-ko.md) ∙ [Português](README-pt.md) ∙ [Română](README-ro.md) ∙ [Русский](README-ru.md) ∙ [Slovenščina](README-sl.md) ∙ [Українська](README-uk.md) ∙ [简体中文](README-zh.md) ∙ [繁體中文](README-zh-Hant.md)*
+*[Čeština](README-cs.md) ∙ [Deutsch](README-de.md) ∙ [Ελληνικά](README-el.md) ∙ [English](README.md) ∙ [Español](README-es.md) ∙ [Français](README-fr.md) ∙ [Indonesia](README-id.md) ∙ [Italiano](README-it.md) ∙ [日本語](README-ja.md) ∙ [한국어](README-ko.md) ∙ [polski](README-pl.md) ∙ [Português](README-pt.md) ∙ [Română](README-ro.md) ∙ [Русский](README-ru.md) ∙ [Slovenščina](README-sl.md) ∙ [Українська](README-uk.md) ∙ [简体中文](README-zh.md) ∙ [繁體中文](README-zh-Hant.md)*
 
 
 # The Art of Command Line
@@ -37,7 +37,7 @@ aber angesichts des Interesses scheint es vielversprechend, Github zu nutzen, wo
 
 Umfang:
 
-- Diese Anleitung richtet sich an Anfänger und Fortgeschrittene. Die Ziele sind The goals are *Breite* (alles ist wichtig), *Genauigkeit* (konkrete Beispiele für die gebräuchlichsten Anwendungsfälle) und *Knappheit* (Dinge, die nicht wesentlich sind oder leicht anderswo nachgeschlagen werden können, sollen vermieden werden). Jeder Tipp ist in einer bestimmten Situation wesentlich oder deutlich zeitsparend gegenüber bestehenden Alternativen.
+- Diese Anleitung richtet sich an Anfänger und Fortgeschrittene. Die Ziele sind *Breite* (alles ist wichtig), *Genauigkeit* (konkrete Beispiele für die gebräuchlichsten Anwendungsfälle) und *Knappheit* (Dinge, die nicht wesentlich sind oder leicht anderswo nachgeschlagen werden können, sollen vermieden werden). Jeder Tipp ist in einer bestimmten Situation wesentlich oder deutlich zeitsparend gegenüber bestehenden Alternativen.
 - Sie ist für Linux geschrieben, mit der Ausnahme der Abschnitte "[Nur MacOS X](#nur-macos-x)" und "[Nur Windows](#nur-windows)". Viele der anderen Punkte lassen sich nutzen oder sind installierbar auf anderen Unices oder MacOS (oder sogar Cygwin).
 - Der Fokus liegt auf interaktiver Bash, allerdings gelten viele Tipps auch auf anderen Shells sowie für allgemeines Bash-Skripting.
 - Sie beinhaltet sowohl "normale" Unix-Befehle als auch solche, die bestimmte installierte Pakete voaussetzen -- sofern sie wichtig genug sind, dass sie die Aufnahme in diese Anleitung verdienen.
@@ -177,7 +177,7 @@ Hinweise:
 
 - Einige andere Optionen im Zusammenhang mit SSH sind sicherheitsrelevant und sollten nur mit Bedacht aktiviert werden, etwa Zugriff per Subnet oder Host sowie in vertrauenswürdigen Netzwerken: `StrictHostKeyChecking=no`, `ForwardAgent=yes`.
 
-- Erwäge [`mosh`](https://mosh.mit.edu/) als Alternative zu `ssh`, die UDP benutzt, um so abgebrochene Verbindungen zu vermeiden, was ja in gewisser Hinsicht auch komfortabel ist (benötigt Server-seitiges Setup).
+- Erwäge [`mosh`](https://mosh.org/) als Alternative zu `ssh`, die UDP benutzt, um so abgebrochene Verbindungen zu vermeiden, was ja in gewisser Hinsicht auch komfortabel ist (benötigt Server-seitiges Setup).
 
 - Um Zugriff auf eine Datei in Oktalform zu erhalten, was zur Systemkonfiguration zwar nützlich, jedoch über `ls` nicht verfügbar und leicht zu vermasseln ist, verwende etwas wie
 ```sh
